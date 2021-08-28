@@ -10,7 +10,7 @@ class Route {
                 '/backend/home' => 'backend/views/users/index.php',
                 '/backend/'  => 'backend/views/users/index.php',
                 '/backend/jquery.js' => 'backend/js/jquery.js',
-                '/backend/test.js' => 'backend/js/test.js',
+                '/backend/users_index.js' => 'backend/js/users_index.js',
             ];
         }
        
