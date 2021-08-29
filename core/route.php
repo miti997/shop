@@ -9,8 +9,8 @@ class Route {
                 '/' => 'frontend/home.php',
                 '/backend/home' => 'backend/views/users/index.php',
                 '/backend/'  => 'backend/views/users/index.php',
-                '/backend/jquery.js' => 'backend/js/jquery.js',
-                '/backend/users_index.js' => 'backend/js/users_index.js',
+                '/backend/users' => 'backend/views/users/index.php',
+                '/users/index' => 'phphandler.php',
             ];
         }
        

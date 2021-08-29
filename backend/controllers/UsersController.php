@@ -6,7 +6,6 @@ class UsersController extends UsersModel
     {
         $users = new UsersModel();
         $results = $users->index();
-        
         return $results;
     }
 }

@@ -5,18 +5,10 @@ $(document).ready(function() {
 function ajaxCallIndex() {
     $.ajax({
         type : "POST",
-        url : '../../core/phphandler.php',
-        data : {
-            'class' : "users",
-            'method' : "index",
-            'parameters' : {
-                'test1' : 'a',
-                'test2' : 'b',
-            }
-        },
+        url : '/users/index',       
         dataType : "json",
         success: function(data) {
-            console.log(data);
+            $('#results').append(data);
         }
     });
 }
