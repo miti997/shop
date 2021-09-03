@@ -13,4 +13,7 @@ function autoLoad($className)
     if ($className == 'Connection') {
         include 'connection.php';
     }
+    if ($className == 'Combiner') {
+        include 'combiner.php';
+    }
 }

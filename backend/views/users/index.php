@@ -1,3 +1,6 @@
+this is the user index
 <div id = 'results'></div>
-<script type="text/javascript" src='/backend/js/jquery.js'></script>
-<script type="text/javascript" src='/backend/js/users_index.js'></script>
+<?php 
+    $combine = new Combiner();
+    $combine->combineScript(['jquery','users_index']);
+?>

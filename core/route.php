@@ -7,8 +7,8 @@ class Route {
             $uri = $_SERVER['REQUEST_URI'];
             $routes = [
                 '/' => 'frontend/home.php',
-                '/backend/home' => 'backend/views/users/index.php',
-                '/backend/'  => 'backend/views/users/index.php',
+                '/backend/home' => 'backend/views/dashboard.php',
+                '/backend/'  => 'backend/views/dashboard.php',
                 '/backend/users' => 'backend/views/users/index.php',
                 '/backend/users/index' => 'backend/views/users/index.php',
                 '/users/index' => 'phphandler.php',
