@@ -8,5 +8,11 @@ class UsersController extends UsersModel
         $results = $users->index();
         return $results;
     }
+    public function add()
+    {
+        $users = new UsersModel();
+        $results = $users->add();
+        return $results;
+    }
 }
 

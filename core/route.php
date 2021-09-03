@@ -10,7 +10,10 @@ class Route {
                 '/backend/home' => 'backend/views/users/index.php',
                 '/backend/'  => 'backend/views/users/index.php',
                 '/backend/users' => 'backend/views/users/index.php',
+                '/backend/users/index' => 'backend/views/users/index.php',
                 '/users/index' => 'phphandler.php',
+                '/backend/users/add' => 'backend/views/users/add.php',
+                '/users/add' => 'phphandler.php',
             ];
         }
        
