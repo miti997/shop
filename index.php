@@ -1,7 +1,8 @@
 <?php
-include 'core/route.php';
 include 'core/autoload.php';
-include 'core/elementloader.php';
+$elemet = new ElementLoader();
+$elemet->loadElement();
 $route = new Route();
 $route->submit();
+$route->checkRoute();
 ?>

@@ -1,6 +1,6 @@
 <?php
 
-if(isset($_POST) && isset($_SERVER['REQUEST_URI'])) {
+if(isset($_SERVER['REQUEST_URI'])) {
     $request = $_SERVER['REQUEST_URI'];
     $request=explode('/',$request);
     $class = ucfirst($request[1]) . 'Controller';

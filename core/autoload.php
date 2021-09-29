@@ -16,4 +16,10 @@ function autoLoad($className)
     if ($className == 'Combiner') {
         include 'combiner.php';
     }
+    if ($className == 'Route') {
+        include 'route.php';
+    }
+    if ($className == 'ElementLoader') {
+        include 'elementloader.php';
+    }
 }

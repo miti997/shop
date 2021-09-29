@@ -14,5 +14,11 @@ class UsersController extends UsersModel
         $results = $users->add();
         return $results;
     }
+    public function view()
+    {
+        $users = new UsersModel();
+        $results = $users->view();
+        return $results;
+    }
 }
 

@@ -1,28 +1,37 @@
 <?php
 class Route {
     public function submit() {
+        $start = (float)microtime();
         if(!isset($_SERVER['REQUEST_URI'])) {
             http_response_code(404);
         } else {
             $uri = $_SERVER['REQUEST_URI'];
             $routes = [
                 '/' => 'frontend/home.php',
-                '/backend/home' => 'backend/views/dashboard.php',
-                '/backend/'  => 'backend/views/dashboard.php',
-                '/backend/users' => 'backend/views/users/index.php',
-                '/backend/users/index' => 'backend/views/users/index.php',
-                '/users/index' => 'phphandler.php',
-                '/backend/users/add' => 'backend/views/users/add.php',
+                '/admin/home' => 'backend/views/dashboard.php',
+                '/admin'  => 'backend/views/dashboard.php',
+                '/admin/users' => 'backend/views/users/index.php',
+                '/admin/users/index' => 'backend/views/users/index.php',
+                '/admin/users/add' => 'backend/views/users/add.php',
                 '/users/add' => 'phphandler.php',
+                '/admin/users/view/.*\S' => 'backend/views/users/view.php',
             ];
         }
-       
-        if(!array_key_exists($uri, $routes)) {
+        foreach ($routes as $key=>$value) {
+            $result = $this->checkRoute($key, $uri);
+            if($result === 1) {
+                $end = (float)microtime()-$start;
+                echo '<br>'.$end.'<br>';
+                return include $routes[$key];
+            }
+        }
+        if ($result === 0) {
             http_response_code(404);
             return include 'core/errors/404error.php';
-        } else {
-            return include $routes[$uri];
-        }
+        }       
+    }
+    public function checkRoute($regex = null, $uri=null) {
+        return preg_match("@^(?:$regex)$@", $uri, $match);
     }
 }
 ?>

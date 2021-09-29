@@ -4,7 +4,7 @@ $(document).ready(function() {
 
 function ajaxCallIndex() {
     $.ajax({
-        type : "POST",
+        type : "GET",
         url : '/users/index',       
         dataType : "json",
         success: function(data) {
